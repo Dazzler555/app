@@ -1,0 +1,13 @@
+image: brock5555/ktt
+
+environment:
+  tok:
+    secure: AUInWRT3NLNjm7mUoyhGLF7GjlxDhvHX6Oy25NKWT96819iaO3MFHhAgVuSkou1s
+
+install:
+- sudo apt install git wget -y
+
+test_script:
+- git clone https://dozzler555:"$tok"@github.com/dozzler555/ttk source
+- cd source
+- bash start.sh
