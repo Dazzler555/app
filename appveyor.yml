@@ -19,7 +19,7 @@ test_script:
 - sh: sudo apt install aria2 -y 
 - sh: sudo apt install -y ffmpeg mediainfo unzip p7zip-full p7zip-rar
 - sh: curl https://rclone.org/install.sh
-- sh: sudo bash install.sh
+
 - sh: sudo apt-get install -y software-properties-common
 - sh: sudo add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable
 - sh: sudo apt install -y qbittorrent-nox
