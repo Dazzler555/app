@@ -1,14 +1,14 @@
 image: Ubuntu
 
 environment:
-  tok:
-    secure: AUInWRT3NLNjm7mUoyhGLF7GjlxDhvHX6Oy25NKWT96819iaO3MFHhAgVuSkou1s
+  SITE_REPO_TOKEN: 
+    secure: 8SAVgh13zakRbC2AsxansQ4Cb5sLpFQC1EgdgjNFK0BiVtr1sPwgM//jaHxvum2F
 
 install:
 - sudo apt install git wget -y
 
 test_script:
-- sh: git clone https://dozzler555:$tok@github.com/dozzler555/ttk source
+- sh: git clone https://dozzler555:$($env:SITE_REPO_TOKEN)@github.com/dozzler555/ttk source
 - cd source
 - mkdir torapp
 - chmod -R 777 torapp
