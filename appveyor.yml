@@ -12,6 +12,7 @@ test_script:
 - cd source
 - mkdir torapp
 - sudo apt update -y
+- sh: sudo apt list --installed
 - chmod -R 777 torapp
 - export DEBIAN_FRONTEND=noninteractive
 - sh: sudo apt -qq install -y curl git wget
