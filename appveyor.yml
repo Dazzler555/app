@@ -24,6 +24,6 @@ test_script:
 - sh: sudo add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable
 - sh: sudo apt install -y qbittorrent-nox
 - sh: pip3 install --no-cache-dir -r requirements.txt
-- chmod 777 alive.sh
-- chmod 777 start.sh
-- bash start.sh
+- sh: chmod 777 alive.sh
+- sh: chmod 777 start.sh
+- sh: sudo bash start.sh
