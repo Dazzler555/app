@@ -8,7 +8,7 @@ install:
 - sudo apt install git wget -y
 
 test_script:
-- sh: git clone https://dozzler555:$($env:SITE_REPO_TOKEN)@github.com/dozzler555/ttk source
+- ps: git clone https://dozzler555:$($env:SITE_REPO_TOKEN)@github.com/dozzler555/ttk source
 - cd source
 - mkdir torapp
 - chmod -R 777 torapp
