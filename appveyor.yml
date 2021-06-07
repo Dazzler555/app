@@ -18,8 +18,9 @@ test_script:
 - sh: sudo apt -qq install -y curl git wget
 - sh: wget https://github.com/rokibhasansagar/slimhub_actions/raw/main/cleanup.sh
 - sh: chmod a+x cleanup.sh
-- sh: cleanup.sh
-- sh: sudo apt install python3-pip -y
+- sh: sudo bash cleanup.sh
+- sh: sudo apt install gunicorn -y
+- sh: sudo apt install python3 python3-pip -y
 - sh: sudo apt install aria2 -y 
 - sh: sudo apt install -y ffmpeg mediainfo unzip p7zip-full p7zip-rar
 - sh: curl https://rclone.org/install.sh
