@@ -1,4 +1,4 @@
-image: brock5555/ktt
+image: Ubuntu
 
 environment:
   tok:
@@ -10,4 +10,19 @@ install:
 test_script:
 - git clone https://dozzler555:"$tok"@github.com/dozzler555/ttk source
 - cd source
+- mkdir torapp
+- chmod -R 777 torapp
+- export DEBIAN_FRONTEND=noninteractive
+- apt -qq install -y curl git wget \
+    python3 python3-pip \
+    aria2 \
+    ffmpeg mediainfo unzip p7zip-full p7zip-rar
+- curl https://rclone.org/install.sh | bash
+- apt-get install -y software-properties-common
+- apt update -y
+- add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable
+- apt install -y qbittorrent-nox
+- pip3 install --no-cache-dir -r requirements.txt
+- chmod 777 alive.sh
+- chmod 777 start.sh
 - bash start.sh
